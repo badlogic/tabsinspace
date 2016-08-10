@@ -12,7 +12,7 @@ public class TabsInSpace {
 		boolean process(File file) throws IOException;
 	}
 
-	private static void walkFiles(File dir, FileProcessor processor) throws Exception {
+	public static void walkFiles(File dir, FileProcessor processor) throws Exception {
 		if (!processor.process(dir)) return;
 		for (File f : dir.listFiles()) {
 			if (f.isDirectory()) {
